@@ -10,20 +10,14 @@ class Home
 	public function index()
 	{
 
-
-		if ($_POST) {
-			show($_POST['Home']);
-			// $mail = $_POST['mail'];
-			// $file = fopen('test.txt', "a");
-			// fwrite($file, "[ MAIL ]"."$mail\n");
-			// fclose($file);
-		} else {
-			print_r($_POST);
-		}
-
 		$job = new Job();
-		$jobs = $job->getAllJobs();
-		$qty = count($jobs);
+		//Create
+		if ($_POST) {
+			$active_page = $_POST['page_link'];
+			$jobs = $job->getAllJobs($active_page);
+		} else {
+			$jobs = $job->getAllJobs();
+		}
 		$this->data = $jobs;
 		$this->view('home');
 	}

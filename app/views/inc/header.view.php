@@ -13,6 +13,6 @@
     <nav class="navbar bg-body-tertiary shadow-sm p-3 mb-5 bg-body-tertiary rounded">
         <div class="container">
             <a href="<?= ROOT ?>/home" class="navbar-brand">Home</a>
-            <a href="<?= ROOT ?>/create" class="btn btn-outline-success">Create</a>
+            <a href="<?= ROOT ?>/createJob" class="btn btn-outline-success">Create</a>
         </div>
     </nav>

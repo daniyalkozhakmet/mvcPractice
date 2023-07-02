@@ -9,14 +9,13 @@ trait Controller
 	{
 		$filename = "../app/views/" . $name . ".view.php";
 		if (file_exists($filename)) {
-			// show($this->data);
 			if (isset($this->data)) {
 				$response = $this->data;
 			}
 			$response = $this->data;
+			extract($response);
 			require $filename;
 		} else {
-
 			$filename = "../app/views/404.view.php";
 			require $filename;
 		}
